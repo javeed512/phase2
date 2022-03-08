@@ -36,7 +36,7 @@ public class PaymentServlet extends HttpServlet {
 						
 				ServletContext context =		request.getServletContext();
 				
-				String amount = (String)	context.getAttribute("amount");
+				String amount = (String)	context.getAttribute("amount"); // context object
 				
 				
 				
