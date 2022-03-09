@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="GET_POST_Demo" path="/GET_POST_Demo" reloadable="true" source="org.eclipse.jst.jee.server:GET_POST_Demo"/><Context docBase="myapp" path="/myapp" reloadable="true" source="org.eclipse.jst.jee.server:myapp"/><Context docBase="ScopeVariables" path="/ScopeVariables" reloadable="true" source="org.eclipse.jst.jee.server:ScopeVariables"/></Host>
+      <Context docBase="FilterDemo" path="/FilterDemo" reloadable="true" source="org.eclipse.jst.jee.server:FilterDemo"/><Context docBase="FilterWithAnno" path="/FilterWithAnno" reloadable="true" source="org.eclipse.jst.jee.server:FilterWithAnno"/><Context docBase="myapp" path="/myapp" reloadable="true" source="org.eclipse.jst.jee.server:myapp"/><Context docBase="Login_Logout_Sessions" path="/Login_Logout_Sessions" reloadable="true" source="org.eclipse.jst.jee.server:Login_Logout_Sessions"/><Context docBase="CookiesDemo" path="/CookiesDemo" reloadable="true" source="org.eclipse.jst.jee.server:CookiesDemo"/></Host>
     </Engine>
   </Service>
 </Server>

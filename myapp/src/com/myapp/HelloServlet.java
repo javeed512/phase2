@@ -53,7 +53,9 @@ public class HelloServlet extends HttpServlet {
 			
 			out.print("<h1>Welcome to Servlets</h1>");
 			
+		String uname =		request.getParameter("uname");
 			
+			out.print("<input type='hidden' name='uname' value="+uname+"/>");
 	
 	}
 

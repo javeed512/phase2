@@ -3,23 +3,14 @@
   <display-name>myapp</display-name>
   <welcome-file-list>
     <welcome-file>/html/index.html</welcome-file>
-   
   </welcome-file-list>
   <servlet>
-  	
-  	
-  	
-  
     <description></description>
     <display-name>HelloServlet</display-name>
     <servlet-name>HelloServlet</servlet-name>
     <servlet-class>com.myapp.HelloServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  
-  
-  
-  
     <servlet-name>HelloServlet</servlet-name>
     <url-pattern>/HelloServlet</url-pattern>
   </servlet-mapping>
@@ -32,5 +23,15 @@
   <servlet-mapping>
     <servlet-name>OldServlet</servlet-name>
     <url-pattern>/OldServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SessionDemo</display-name>
+    <servlet-name>SessionDemo</servlet-name>
+    <servlet-class>com.myapp.SessionDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionDemo</servlet-name>
+    <url-pattern>/SessionDemo</url-pattern>
   </servlet-mapping>
 </web-app>
