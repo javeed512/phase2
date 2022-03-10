@@ -7299,3 +7299,18 @@ Caused by: java.lang.NullPointerException
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
 	... 64 more
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2022-03-10 15:04:52.962
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases/.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-10 15:47:15.574
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.lBVspQKS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-10 15:47:15.575
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.lBVspQKS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-10 15:47:15.575
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-10 15:47:15.576
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.lBVspQKS => OK
