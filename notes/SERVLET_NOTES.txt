@@ -1,0 +1,126 @@
+SERVLET API
+-------------
+
+javax.servlet;
+
+
+Interfaces:
+-----------
+
+Servlet
+ServletConfig
+ServletContext
+ServletRequest
+ServletResponse
+
+Class:
+
+GenericServlet    (Impln  class of Servlet)
+
+
+----------------------------
+
+javax.servlet.http;
+
+Interfaces:
+============
+
+HttpServletRequest
+HttpServletResponse
+HttpSession
+
+Class
+------
+HttpServlet (child of GenericServlet)
+Cookie
+
+
+
+
+
+
+
+
+
+ Servlet(I)   init();  service();  destroy();
+
+	|
+	|
+GenericServlet(c)
+impln init(){ }
+service(){  }
+destroy(){ }
+
+	|
+	|
+HttpServlet(C)
+
+init(){ }
+service(){ }
+destroy(){  }
+
+doGet(){  }
+doPost(){ }
+
+-------------------------------
+
+HTTP Protocol uses 4 methods  get , post , put , delete
+
+----------------------------------------------------------------------
+
+
+
+RequestDispatcher 
+
+1. forward(request,response);  // forward request to destination and display only final page
+2. include(request,response);  // include data from each and every source and display all data
+
+
+
+
+
+
+Scope Variables/ Objects:
+==========================
+1. request
+2. session
+3. context/application
+
+xxx.setAttribute(k,v); 
+Eg:
+request.setAttribute("uname","javeed");
+session.setAttribute("uname","javeed");
+context.setAttribute("emp",new Employe());
+
+
+
+xxx.getAttribute()
+
+javeed <---  request.getAttribute("uname");
+ Employee e1 =	<---- context.getAttribute("emp");	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

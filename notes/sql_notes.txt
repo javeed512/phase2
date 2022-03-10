@@ -1,0 +1,95 @@
+SQL OVERVIEW SESSION:
+======================
+
+DDL : Data Definition Lang  (auto-commit)
+
+CREATE , ALTER , DROP , TRUNCATE
+
+If we work on Table Structure 
+-----------------------------------------
+
+DML: Data Manipulation Lang  (is not auto-commit)
+If we work on Table Data
+
+INSERT , UPDATE , DELETE
+-------------------------------------------
+DRL/DQL : Data Retrieval Lang
+If we want to select data
+SELECT  ***********
+--------------------------------------
+
+
+DCL : Data Control Lang
+Grant , Revoke 
+
+TCL : Transaction Control Lang
+Commit , Savepoint , Rollback 
+
+
+
+Create Database:
+-------------------
+Create Database  mphasis;
+
+Use Database
+-------------
+use mphasis;
+
+Show Databases:
+----------------
+show databases;
+
+
+Create Table:
+------------------
+create table  Employee(eid int(3)  primary key,ename  varchar(15) , doj Date ); 
+
+Database Constraints:
+--------------------
+
+Not Null --> it does not allow null
+Unique ---> duplicate is not allow , null allow
+Primary key = Unique + Not Null  (this table will be consider as master/parent table)
+Foriegn key --> use to refer table as child table
+
+
+
+insert1
+insert2
+
+update1
+update2
+
+select1
+
+delete1
+
+commit;  // 1st transaction success
+
+rollback;// transaction cancel or undo
+
+-----------------------------
+
+1.Statement // static queries 
+2.PrepareStatement  // Dynamic queries
+3.CallableStatement // stored procedure pl/sql procedure or function 
+
+
+Procedure:
+==========
+
+DELIMITER  $$
+CREATE PROCEDURE MYPRO(IN  id  INT(3))
+DELETE  FROM EMPLOYEE WHERE EID = id;
+$$
+
+
+DELIMITER $$
+CREATE  PROCEDURE  EMP_PRO1(IN id INT(3),IN name VARCHAR(12), IN sal INT(10))
+INSERT INTO EMPLOYEE VALUES(id,name,current_date,sal);
+UPDATE EMPLOYEE SET salary = 55555  where  eid = 101;
+$$
+
+
+
+
