@@ -9,8 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+
+
 
 
 /**
@@ -20,10 +23,9 @@ import org.hibernate.SessionFactory;
 public class InitHibernate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * Default constructor. 
-     */
-    public InitHibernate() {
+	
+	
+	public InitHibernate() {
         // TODO Auto-generated constructor stub
     }
 
@@ -34,16 +36,24 @@ public class InitHibernate extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 
-	
+		
+	Logger log =	Logger.getLogger(InitHibernate.class);	
+		
+		
+			
 	      try {
               PrintWriter out = response.getWriter();
               out.println("<html><body>");
 
               SessionFactory factory = HibernateUtil.getSessionFactory();
-                     
+               log.info("Session Factory Created");      
               Session session = factory.openSession();
               out.println("Hibernate Session opened.<br>");
               out.print(session);
+              	log.info("session created..");
+              	log.warn("this is warning...");
+              	log.error("sorry invalid user ");;
+              	
               session.close();
               out.println("Hibernate Session closed.<br>");
                      
